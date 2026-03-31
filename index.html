@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Todo</h1>
+      <button class="theme-toggle" id="themeToggle" aria-label="테마 전환">🌙</button>
+    </header>
+
+    <div class="input-area">
+      <div class="input-row">
+        <select class="priority-select" id="prioritySelect" aria-label="우선순위">
+          <option value="normal">보통</option>
+          <option value="high">높음</option>
+          <option value="low">낮음</option>
+        </select>
+        <input
+          class="todo-input"
+          id="todoInput"
+          type="text"
+          placeholder="할 일을 입력하세요..."
+          autocomplete="off"
+          maxlength="200"
+        />
+        <button class="add-btn" id="addBtn" aria-label="추가">+</button>
+      </div>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">전체</button>
+      <button class="filter-btn" data-filter="active">미완료</button>
+      <button class="filter-btn" data-filter="completed">완료</button>
+    </div>
+
+    <ul class="todo-list" id="todoList"></ul>
+
+    <footer class="footer" id="footer">
+      <span class="count" id="count"></span>
+      <button class="clear-btn" id="clearBtn">완료 항목 삭제</button>
+    </footer>
+  </div>
+
+  <div class="empty-state" id="emptyState">
+    <div class="empty-icon">✓</div>
+    <p>할 일이 없습니다</p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
