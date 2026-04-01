@@ -2,10 +2,10 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #f0f2f5;
-  --surface: #ffffff;
-  --surface2: #f8f9fa;
-  --border: #e2e5e9;
+  --bg: #ede9f6;
+  --surface: #faf8ff;
+  --surface2: #f3effc;
+  --border: #d9d0f0;
   --text: #1a1d23;
   --text-muted: #8b95a1;
   --accent: #5b7fff;
@@ -23,10 +23,10 @@
 }
 
 [data-theme="dark"] {
-  --bg: #0f1117;
-  --surface: #1a1d27;
-  --surface2: #22263a;
-  --border: #2d3245;
+  --bg: #0e0b1a;
+  --surface: #1a1526;
+  --surface2: #221d33;
+  --border: #352d50;
   --text: #e8eaf0;
   --text-muted: #6b7280;
   --accent: #6e8eff;
@@ -222,7 +222,7 @@ body {
   width: 20px;
   height: 20px;
   border: 2px solid var(--border);
-  border-radius: 50%;
+  border-radius: 4px;
   cursor: pointer;
   flex-shrink: 0;
   display: flex; align-items: center; justify-content: center;

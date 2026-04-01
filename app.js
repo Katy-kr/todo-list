@@ -124,12 +124,16 @@ function clearCompleted() {
 }
 
 // ── Render ─────────────────────────────────────────────────────────────────
+const PRIORITY_ORDER = { high: 0, normal: 1, low: 2 };
+
 function getFiltered() {
+  let list;
   switch (filter) {
-    case 'active':    return todos.filter(t => !t.done);
-    case 'completed': return todos.filter(t => t.done);
-    default:          return todos;
+    case 'active':    list = todos.filter(t => !t.done); break;
+    case 'completed': list = todos.filter(t => t.done);  break;
+    default:          list = todos;
   }
+  return list.slice().sort((a, b) => PRIORITY_ORDER[a.priority] - PRIORITY_ORDER[b.priority]);
 }
 
 function render() {
